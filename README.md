@@ -235,12 +235,12 @@ if __name__ == "__main__":
 ```
 
 **代码工作原理：**
-1. **需要 API Token：**如果还没有，请查看我们的[Google 地图爬虫 API 设置指南](https://github.com/bright-cn/Google-Maps-Scraper/blob/main/scraper_api_setup.md#setting-up-google-maps-scraper-api)获取。
-2. **启动数据采集：**将 API Token 填入代码后，发起采集请求并返回 `snapshot_id`，用于后续跟踪任务状态。
-3. **等待结果：**采集需要几分钟时间。期间代码会轮询 `snapshot_id` 的状态：
+1. **需要 API Token**：如果还没有，请查看我们的[Google 地图爬虫 API 设置指南](https://github.com/bright-cn/Google-Maps-Scraper/blob/main/scraper_api_setup.md#setting-up-google-maps-scraper-api)获取。
+2. **启动数据采集**：将 API Token 填入代码后，发起采集请求并返回 `snapshot_id`，用于后续跟踪任务状态。
+3. **等待结果**：采集需要几分钟时间。期间代码会轮询 `snapshot_id` 的状态：
     - 状态 "running" = 仍在采集
     - 状态 "ready" = 采集完成，数据已保存为 JSON 文件
-4. **其他参数：**可在 `_trigger_collection` 中添加更多参数以自定义采集。参见[下一节](https://github.com/bright-cn/Google-Maps-Scraper?tab=readme-ov-file#customizing-data-collection-with-api-parameters)了解参数与不同数据交付方式。
+4. **其他参数**：可在 `_trigger_collection` 中添加更多参数以自定义采集。参见[下一节](https://github.com/bright-cn/Google-Maps-Scraper?tab=readme-ov-file#customizing-data-collection-with-api-parameters)了解参数与不同数据交付方式。
 
 ### 使用 API 参数自定义数据采集
 通过以下 API 参数自定义数据采集：
